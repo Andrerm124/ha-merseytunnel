@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mersey Tunnels",
+        "description": "Sign in with the account number and password you use on the Mersey Tunnels website.",
+        "data": {
+          "username": "Account number",
+          "password": "Password"
+        },
+        "data_description": {
+          "username": "The Fast Tag account number shown on your dashboard."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in again",
+        "description": "The password stored for account {username} was rejected. Enter the current one.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the Mersey Tunnels website. Check your connection and try again.",
+      "invalid_auth": "That account number and password were rejected.",
+      "throttled": "The website is refusing further sign-in attempts for now. Wait a few minutes and try again.",
+      "unexpected_page": "Signed in, but the dashboard did not contain a balance. The website may have changed.",
+      "unknown": "Something unexpected went wrong. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "That account is already set up.",
+      "reauth_successful": "Signed in again successfully."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "low_balance": {
+        "name": "Low balance"
+      }
+    },
+    "sensor": {
+      "balance": {
+        "name": "Balance"
+      },
+      "low_fund_threshold": {
+        "name": "Low fund threshold"
+      }
+    }
+  }
+}
