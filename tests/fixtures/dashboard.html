@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><title>Mersey Tunnels | Dashboard</title></head>
+<body>
+<div class="user-panel logged-in">
+    <div class="user-balance" x-data="{show:false}">
+        <a href="#" x-on:click="show = ! show" class="toggle-actions">
+            <span>&pound;8.90
+            </span>
+        </a>
+    </div>
+    <a href="https://www.merseytunnels.co.uk/logout" class="logout">Logout</a>
+</div>
+<div class="card-wrap my-4 col-sm-6 col-lg-12">
+    <div class="p-5 pt-6 bg-white shadow-lg rounded-lg" x-data="{ show: true }">
+        <div x-on:click="show = !show"><p class="h3 w-full">My Account</p></div>
+        <div class="mt-4" x-show="show">
+            <ul class="space-y-3 my-2">
+                <li>Account Name: <b>A Test Account</b></li>
+                <li>Account Number: <b>000000</b></li>
+                <li>Account Type: <b>Personal</b></li>
+                <li>Low Fund Threshold: <b>&pound;10.00</b></li>
+                <li>Email Statements: <b>No</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card-wrap my-4 col-sm-6 col-lg-12">
+    <div class="p-5 pt-6 bg-white shadow-lg rounded-lg" x-data="{ show: false }">
+        <div x-on:click="show = !show"><p class="h3 w-full">Account Balance</p></div>
+        <div class="mt-4" x-show="show">
+            <ul class="space-y-3 my-2">
+                <li>Account Balance: <b>&pound;8.90</b></li>
+                <li>Account Number: <b>000000</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body></html>
